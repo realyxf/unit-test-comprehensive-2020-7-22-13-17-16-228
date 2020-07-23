@@ -14,9 +14,11 @@ public class GuessNumber {
     }
 
     public String guess(int[] inputGuess) {
+
         for(int answerIndex = 0; answerIndex<answerGenerator.length; answerIndex++){
             answerSet.add(answerGenerator[answerIndex]);
         }
+
         for(int inputGuessindex = 0; inputGuessindex < inputGuess.length; inputGuessindex++){
             if(inputGuess[inputGuessindex] == answerGenerator[inputGuessindex]){
                 countA++;
@@ -25,6 +27,11 @@ public class GuessNumber {
                 countB++;
             }
         }
+
+        if(countA != 0 && countB != 0){
+            countB = countB - countA;
+        }
+
         return String.format("%sA%sB",countA,countB);
     }
 }
