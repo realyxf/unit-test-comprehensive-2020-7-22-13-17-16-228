@@ -1,6 +1,5 @@
 package example;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,6 +10,10 @@ public class GuessNumber {
     Set<Integer> answerSet = new HashSet<>();
     public GuessNumber(AnswerGenerator answerGenerator) {
         this.answerGenerator = answerGenerator.generate();
+
+//        for (int i=0;i<this.answerGenerator.length;i++){
+//            System.out.print(this.answerGenerator[i]);
+//        }
     }
 
     public String guess(int[] inputGuess) {
