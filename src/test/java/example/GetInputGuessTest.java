@@ -1,7 +1,5 @@
 package example;
 
-import com.sun.tools.javac.util.ArrayUtils;
-import com.sun.tools.javac.util.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
