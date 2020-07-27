@@ -1,5 +1,6 @@
 package example;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -7,10 +8,10 @@ public class GetInputGuess {
     public int[] getInput() {
         System.out.println("please input four number from 0 to 9");
         Scanner scanner = new Scanner(System.in);
-        int[] inputGuess = new int[4];
-        for (int i = 0; i < inputGuess.length; i++) {
-            inputGuess[i] = scanner.nextInt();
-        }
+        String inputStr = scanner.nextLine();
+        int[] inputGuess = Arrays.stream(inputStr.split("\\s+"))
+                .mapToInt(Integer::parseInt)
+                .toArray();
         return inputGuess;
     }
 
