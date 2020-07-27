@@ -1,5 +1,6 @@
 package example;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class GetInputGuess {
@@ -11,5 +12,17 @@ public class GetInputGuess {
             inputGuess[i]=scanner.nextInt();
         }
         return inputGuess;
+    }
+
+    public boolean isValidInput(int[] input){
+        HashSet<Integer> inputSet = new HashSet<>();
+        for(int inputItem : input){
+            if(inputSet.contains(inputItem)){
+                System.out.println("Wrong Input，Input again");
+                return false;
+            }
+            inputSet.add(inputItem);
+        }
+        return true;
     }
 }
