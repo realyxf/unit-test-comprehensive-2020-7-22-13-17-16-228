@@ -6,16 +6,13 @@ import java.util.Set;
 public class GuessNumber {
     private int[] answerGenerator;
 
-    Set<Integer> answerSet = new HashSet<>();
+    private Set<Integer> answerSet = new HashSet<>();
 
     public GuessNumber(AnswerGenerator answerGenerator) {
         this.answerGenerator = answerGenerator.generate();
     }
 
     public int[] getAnswerGenerator() {
-        for (int i = 0; i < this.answerGenerator.length; i++) {
-            System.out.print(this.answerGenerator[i]);
-        }
         return answerGenerator;
     }
 
@@ -23,8 +20,8 @@ public class GuessNumber {
         int countA = 0;
         int countB = 0;
 
-        for (int answerIndex = 0; answerIndex < answerGenerator.length; answerIndex++) {
-            answerSet.add(answerGenerator[answerIndex]);
+        for (int i : answerGenerator) {
+            answerSet.add(i);
         }
 
         for (int inputGuessindex = 0; inputGuessindex < inputGuess.length; inputGuessindex++) {
