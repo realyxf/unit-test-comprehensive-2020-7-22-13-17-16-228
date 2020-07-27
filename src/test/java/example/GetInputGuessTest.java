@@ -50,4 +50,17 @@ public class GetInputGuessTest {
         //then
         assertEquals("Wrong Input，Input again",systemOut());
     }
+
+    @Test
+    void should_return_wrong_input_input_again_when_getInput_given_1_2() {
+        //given
+        int[] inputguess = {1,2};
+        GetInputGuess getInputGuess = new GetInputGuess();
+
+        //when
+        getInputGuess.isValidInput(inputguess);
+
+        //then
+        assertEquals("Wrong Input，Input again",systemOut());
+    }
 }
