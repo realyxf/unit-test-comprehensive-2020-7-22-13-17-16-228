@@ -20,8 +20,8 @@ public class GuessNumber {
         int countA = 0;
         int countB = 0;
 
-        for (int i : answerGenerator) {
-            answerSet.add(i);
+        for (int answerItem : answerGenerator) {
+            answerSet.add(answerItem);
         }
 
         for (int inputGuessindex = 0; inputGuessindex < inputGuess.length; inputGuessindex++) {
