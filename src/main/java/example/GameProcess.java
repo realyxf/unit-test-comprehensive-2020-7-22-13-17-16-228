@@ -20,8 +20,14 @@ public class GameProcess {
                 return;
             }
         }
-        System.out.print("the answer is ");
-        guessNumber.getAnswerGenerator();
+        printAnswer(guessNumber);
+    }
 
+    private void printAnswer(GuessNumber guessNumber) {
+        int[] answer = guessNumber.getAnswerGenerator();
+        System.out.print("the answer is ");
+        for(int answerItem : answer){
+            System.out.print(answerItem);
+        }
     }
 }
