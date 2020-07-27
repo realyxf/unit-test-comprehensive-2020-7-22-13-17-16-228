@@ -10,10 +10,6 @@ public class GuessNumber {
 
     public GuessNumber(AnswerGenerator answerGenerator) {
         this.answerGenerator = answerGenerator.generate();
-
-//        for (int i=0;i<this.answerGenerator.length;i++){
-//            System.out.print(this.answerGenerator[i]);
-//        }
     }
 
     public int[] getAnswerGenerator() {
