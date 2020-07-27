@@ -42,14 +42,12 @@ public class GetInputGuessTest {
     void should_return_wrong_input_input_again_when_getInput_given_1_1_2_3() {
         //given
         int[] inputguess = {1,1,2,3};
-        GetInputGuess getInputGuess = Mockito.mock(GetInputGuess.class);
-        when(getInputGuess.getInput()).thenReturn(inputguess);
+        GetInputGuess getInputGuess = new GetInputGuess();
 
         //when
         getInputGuess.isValidInput(inputguess);
 
         //then
-
-
+        assertEquals("Wrong Input，Input again",systemOut());
     }
 }
