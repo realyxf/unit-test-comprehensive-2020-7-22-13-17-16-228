@@ -6,6 +6,7 @@ public class GameProcess {
         AnswerGenerator answerGenerator = new AnswerGeneratorClass();
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         GetInputGuess inputGuess = new GetInputGuess();
+
         int[] input;
         for (int indexTimes = 1; indexTimes <= times ; indexTimes++) {
             input = inputGuess.getInput();
@@ -14,7 +15,7 @@ public class GameProcess {
                 continue;
             }
             System.out.println(guessNumber.guess(input));
-            if (guessNumber.guess(input) == "4A0B") {
+            if (guessNumber.guess(input) .equals("4A0B") ) {
                 System.out.println("Succeed");
                 return;
             }
