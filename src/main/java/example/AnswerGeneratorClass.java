@@ -3,7 +3,7 @@ package example;
 import java.util.HashSet;
 import java.util.Random;
 
-public class AnswerGeneratorClass implements AnswerGenerator{
+public class AnswerGeneratorClass implements AnswerGenerator {
     @Override
     public int[] generate() {
         HashSet<Integer> answerSet = new HashSet<>();
@@ -11,10 +11,10 @@ public class AnswerGeneratorClass implements AnswerGenerator{
         int[] answerGenerator = new int[4];
         do {
             int answerSetItem = random.nextInt(9);
-            if(!answerSet.contains(answerSetItem)){
+            if (!answerSet.contains(answerSetItem)) {
                 answerSet.add(answerSetItem);
             }
-        } while (answerSet.size()<4);
+        } while (answerSet.size() < 4);
 
         int answerGeneratorIndex = 0;
 

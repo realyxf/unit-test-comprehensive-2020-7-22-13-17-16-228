@@ -22,7 +22,7 @@ public class GetInputGuessTest {
     @Test
     void should_return_1234_when_checkout_given_inputguess_1234() {
         //given
-        int[] inputguess = {1,2,3,4};
+        int[] inputguess = {1, 2, 3, 4};
         GetInputGuess getInputGuess = Mockito.mock(GetInputGuess.class);
         when(getInputGuess.getInput()).thenReturn(inputguess);
 
@@ -30,7 +30,7 @@ public class GetInputGuessTest {
         String result = Arrays.toString(getInputGuess.getInput());
 
         //then
-        assertEquals("[1, 2, 3, 4]",result);
+        assertEquals("[1, 2, 3, 4]", result);
 
     }
 
@@ -41,26 +41,26 @@ public class GetInputGuessTest {
     @Test
     void should_return_wrong_input_input_again_when_getInput_given_1_1_2_3() {
         //given
-        int[] inputguess = {1,1,2,3};
+        int[] inputguess = {1, 1, 2, 3};
         GetInputGuess getInputGuess = new GetInputGuess();
 
         //when
         getInputGuess.isValidInput(inputguess);
 
         //then
-        assertEquals("Wrong Input，Input again",systemOut());
+        assertEquals("Wrong Input，Input again", systemOut());
     }
 
     @Test
     void should_return_wrong_input_input_again_when_getInput_given_1_2() {
         //given
-        int[] inputguess = {1,2};
+        int[] inputguess = {1, 2};
         GetInputGuess getInputGuess = new GetInputGuess();
 
         //when
         getInputGuess.isValidInput(inputguess);
 
         //then
-        assertEquals("Wrong Input，Input again",systemOut());
+        assertEquals("Wrong Input，Input again", systemOut());
     }
 }

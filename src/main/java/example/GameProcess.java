@@ -8,14 +8,14 @@ public class GameProcess {
         GetInputGuess inputGuess = new GetInputGuess();
 
         int[] input;
-        for (int indexTimes = 1; indexTimes <= times ; indexTimes++) {
+        for (int indexTimes = 1; indexTimes <= times; indexTimes++) {
             input = inputGuess.getInput();
-            if(!inputGuess.isValidInput(input)){
+            if (!inputGuess.isValidInput(input)) {
                 indexTimes--;
                 continue;
             }
             System.out.println(guessNumber.guess(input));
-            if (guessNumber.guess(input) .equals("4A0B") ) {
+            if (guessNumber.guess(input).equals("4A0B")) {
                 System.out.println("Succeed");
                 return;
             }
