@@ -9,10 +9,9 @@ public class GetInputGuess {
         System.out.println("please input four number from 0 to 9");
         Scanner scanner = new Scanner(System.in);
         String inputStr = scanner.nextLine();
-        int[] inputGuess = Arrays.stream(inputStr.split("\\s+"))
+        return Arrays.stream(inputStr.split("\\s+"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
-        return inputGuess;
     }
 
     public boolean isValidInput(int[] input) {
