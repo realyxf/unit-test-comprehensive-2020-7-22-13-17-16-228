@@ -47,4 +47,16 @@ public class GameProcessTest {
         //then
         assertEquals("In-process",systemOut());
     }
+
+    @Test
+    void should_return_failed_when_get_game_status_given_failed() {
+        //given
+        gameProcess = new GameProcess();
+
+        //when
+        gameProcess.getGameStatus("failed");
+
+        //then
+        assertEquals("Failed",systemOut());
+    }
 }
