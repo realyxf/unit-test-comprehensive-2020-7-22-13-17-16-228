@@ -29,6 +29,9 @@ public class GameProcess {
         if(status.equals("4A0B")){
             System.out.print("Succeed");
         }
+        if(status.equals("wronginput")){
+            System.out.print("In-process");
+        }
     }
 
     private void printAnswer(GuessNumber guessNumber) {
