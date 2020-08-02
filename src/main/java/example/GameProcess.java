@@ -20,6 +20,7 @@ public class GameProcess {
                 getGameStatus("4A0B");
                 return;
             }
+            getGameStatus("wronginput");
         }
         printAnswer(guessNumber);
     }

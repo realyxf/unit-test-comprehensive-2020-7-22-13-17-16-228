@@ -35,4 +35,16 @@ public class GameProcessTest {
         //then
         assertEquals("Succeed",systemOut());
     }
+
+    @Test
+    void should_return_in_process_when_get_game_status_given_wrong_input() {
+        //given
+        gameProcess = new GameProcess();
+
+        //when
+        gameProcess.getGameStatus("wronginput");
+
+        //then
+        assertEquals("In-process",systemOut());
+    }
 }
