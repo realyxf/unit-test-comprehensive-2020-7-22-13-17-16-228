@@ -33,7 +33,7 @@ public class GameProcessTest {
         gameProcess.getGameStatus("4A0B");
 
         //then
-        assertEquals("Succeed",systemOut());
+        assertEquals("Succeed\n",systemOut());
     }
 
     @Test
@@ -45,7 +45,7 @@ public class GameProcessTest {
         gameProcess.getGameStatus("wronginput");
 
         //then
-        assertEquals("In-process",systemOut());
+        assertEquals("In-process\n",systemOut());
     }
 
     @Test
@@ -57,6 +57,6 @@ public class GameProcessTest {
         gameProcess.getGameStatus("failed");
 
         //then
-        assertEquals("Failed",systemOut());
+        assertEquals("Failed\n",systemOut());
     }
 }

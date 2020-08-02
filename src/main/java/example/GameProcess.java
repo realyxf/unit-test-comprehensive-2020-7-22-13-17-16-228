@@ -30,13 +30,13 @@ public class GameProcess {
 
     void getGameStatus(String status){
         if(status.equals("4A0B")){
-            System.out.print("Succeed");
+            System.out.print("Succeed\n");
         }
         if(status.equals("wronginput")){
-            System.out.print("In-process");
+            System.out.print("In-process\n");
         }
         if(status.equals("failed")){
-            System.out.print("Failed");
+            System.out.print("Failed\n");
         }
     }
 
