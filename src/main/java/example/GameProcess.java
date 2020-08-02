@@ -6,11 +6,12 @@ public class GameProcess {
         AnswerGenerator answerGenerator = new AnswerGeneratorClass();
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         GetInputGuess inputGuess = new GetInputGuess();
+        InputNumberValid inputNumberValid = new InputNumberValid();
 
         int[] input;
         for (int indexTimes = 1; indexTimes <= times; indexTimes++) {
             input = inputGuess.getInput();
-            if (!inputGuess.isValidInput(input)) {
+            if (!inputNumberValid.isValidInput(input)) {
                 indexTimes--;
                 continue;
             }
