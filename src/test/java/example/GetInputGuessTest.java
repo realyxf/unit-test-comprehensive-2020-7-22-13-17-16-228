@@ -42,10 +42,10 @@ public class GetInputGuessTest {
     void should_return_wrong_input_input_again_when_getInput_given_1_1_2_3() {
         //given
         int[] inputguess = {1, 1, 2, 3};
-        GetInputGuess getInputGuess = new GetInputGuess();
+        InputNumberValid inputNumberValid = new InputNumberValid();
 
         //when
-        getInputGuess.isValidInput(inputguess);
+        inputNumberValid.isValidInput(inputguess);
 
         //then
         assertEquals("Wrong Input，Input again", systemOut());
@@ -55,10 +55,10 @@ public class GetInputGuessTest {
     void should_return_wrong_input_input_again_when_getInput_given_1_2() {
         //given
         int[] inputguess = {1, 2};
-        GetInputGuess getInputGuess = new GetInputGuess();
+        InputNumberValid inputNumberValid = new InputNumberValid();
 
         //when
-        getInputGuess.isValidInput(inputguess);
+        inputNumberValid.isValidInput(inputguess);
 
         //then
         assertEquals("Wrong Input，Input again", systemOut());
