@@ -25,7 +25,9 @@ public class GameProcess {
     }
 
     void getGameStatus(String status){
-
+        if(status.equals("4A0B")){
+            System.out.print("Succeed");
+        }
     }
 
     private void printAnswer(GuessNumber guessNumber) {
