@@ -20,8 +20,11 @@ public class GameProcess {
                 getGameStatus("4A0B");
                 return;
             }
-            getGameStatus("wronginput");
+            if(indexTimes != 6){
+                getGameStatus("wronginput");
+            }
         }
+        getGameStatus("failed");
         printAnswer(guessNumber);
     }
 
@@ -31,6 +34,9 @@ public class GameProcess {
         }
         if(status.equals("wronginput")){
             System.out.print("In-process");
+        }
+        if(status.equals("failed")){
+            System.out.print("Failed");
         }
     }
 
