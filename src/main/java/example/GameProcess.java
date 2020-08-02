@@ -17,11 +17,15 @@ public class GameProcess {
             }
             System.out.println(guessNumber.guess(input));
             if (guessNumber.guess(input).equals("4A0B")) {
-                System.out.println("Succeed");
+                getGameStatus("4A0B");
                 return;
             }
         }
         printAnswer(guessNumber);
+    }
+
+    void getGameStatus(String status){
+
     }
 
     private void printAnswer(GuessNumber guessNumber) {
