@@ -12,7 +12,7 @@ import static org.mockito.Mockito.when;
 
 public class GameProcessTest {
 
-    GameProcess gameProcess;
+    private GameProcess gameProcess;
     private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     private String systemOut() {

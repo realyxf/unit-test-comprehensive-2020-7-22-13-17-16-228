@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class GuessNumberTest {
-    GuessNumber guessNumber;
+    private GuessNumber guessNumber;
 
     @BeforeEach
     void setUp() {
